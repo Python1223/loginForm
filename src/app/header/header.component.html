@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark bg-primary">
+      <img src="https://www.adobe.com/express/create/media_127a4cd0c28c2753638768caf8967503d38d01e4c.jpeg?width=400&format=jpeg&optimize=medium" width="110" height="110" class="d-inline-block align-top" alt="">
+  
+      
+    <ul>
+        <span *ngIf="lc.getItem('status')=='failed' then trueBlock else falseBlock"></span>
+            <ng-template #trueBlock>
+                <li>Login</li>
+                <li>Register</li>
+            </ng-template>
+
+            <ng-template #falseBlock>
+                <li id="name">RITTIK <i>(logged in)</i></li>
+                <li>Logout</li>
+
+            </ng-template>
+    </ul>
+
+  
+  
+    </nav>
